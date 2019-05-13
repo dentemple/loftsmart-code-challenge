@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
-/* State */
+/* state */
 import { Provider } from 'react-redux';
 import configureStore from './state/store';
 
-/* Styling */
+/* styling */
 import { ThemeProvider } from 'styled-components';
 import theme from './theme';
 
@@ -32,7 +33,9 @@ function render() {
   ReactDOM.render(
     <Provider store={configureStore()}>
       <ThemeProvider theme={theme}>
-        <App />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </ThemeProvider>
     </Provider>,
     document.getElementById('root')

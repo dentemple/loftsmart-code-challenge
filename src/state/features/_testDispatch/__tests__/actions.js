@@ -1,4 +1,4 @@
-import { _TEST_DISPATCH, _testDispatch } from '../../_testDispatch';
+import { _TEST_DISPATCH, _testDispatch } from '../index';
 
 describe('_testDispatch', () => {
   describe('actions', () => {

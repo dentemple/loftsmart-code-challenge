@@ -1,19 +1,19 @@
-// Types
+/* types */
 export const _TEST_DISPATCH = '_TEST_DISPATCH';
 
-// Actions
+/* actions */
 export const _testDispatch = () => ({
   type: _TEST_DISPATCH
 });
 
-// State
+/* state */
 export const initialState = {
   str: 'Hello, world',
   val: 0
 };
 
-// Reducers
-export function _testReducer(state = initialState, action) {
+/* reducers */
+export default function _test(state = initialState, action) {
   switch (action.type) {
     case _TEST_DISPATCH:
       return {
@@ -26,5 +26,3 @@ export function _testReducer(state = initialState, action) {
       return state;
   }
 }
-
-export default _testReducer;

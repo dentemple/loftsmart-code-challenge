@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 
-import _testDispatchReducer from './_testDispatch';
+import properties from './getProperties';
+import _testReducer from './_testDispatch';
 
 const reducers = combineReducers({
-  _test: _testDispatchReducer
+  properties,
+  _test: _testReducer
 });
 
 export default reducers;

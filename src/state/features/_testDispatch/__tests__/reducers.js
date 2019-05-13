@@ -1,4 +1,4 @@
-import reducer, { _TEST_DISPATCH, initialState } from '../../_testDispatch';
+import reducer, { _TEST_DISPATCH, initialState } from '../index';
 
 describe('_testDispatch', () => {
   describe('reducer', () => {
