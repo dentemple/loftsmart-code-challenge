@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import { Header } from '../../organisms'
 import { propertiesType } from '../../../types/api'
 
 class Properties extends Component {
@@ -16,9 +17,9 @@ class Properties extends Component {
 
   render() {
     return (
-      <div>
-        <p>Properties</p>
-      </div>
+      <>
+        <Header title='Properties' />
+      </>
     )
   }
 }

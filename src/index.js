@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 /* state */
 import { Provider } from 'react-redux';
@@ -12,6 +12,8 @@ import theme from './theme';
 
 /* polyfills */
 import 'whatwg-fetch';
+
+// import * as serviceWorker from './utils/serviceWorker'
 
 // ----------
 /* Main execution */
@@ -33,9 +35,9 @@ function render() {
   ReactDOM.render(
     <Provider store={configureStore()}>
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
+        <Router>
           <App />
-        </BrowserRouter>
+        </Router>
       </ThemeProvider>
     </Provider>,
     document.getElementById('root')
@@ -45,5 +47,4 @@ function render() {
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-// import * as serviceWorker from './serviceWorker';
 // serviceWorker.unregister()

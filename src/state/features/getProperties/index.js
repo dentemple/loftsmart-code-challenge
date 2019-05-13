@@ -84,3 +84,6 @@ export default function properties(state = initialState, action) {
       return state;
   }
 }
+
+/* selectors */
+export const getPropertiesFromState = state => state.properties;

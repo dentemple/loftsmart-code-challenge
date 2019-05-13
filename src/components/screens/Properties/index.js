@@ -1,9 +1,12 @@
 import { connect } from 'react-redux';
-import { fetchProperties } from '../../../state/features/getProperties';
 
 import UI from './PropertiesUI';
+import {
+  fetchProperties,
+  getPropertiesFromState
+} from '../../../state/features/getProperties';
 
-const mapState = ({ properties }) => ({ properties });
+const mapState = state => getPropertiesFromState(state);
 
 const mapDispatch = dispatch => ({
   fetchProperties: resource => {

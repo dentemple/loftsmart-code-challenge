@@ -16,7 +16,7 @@ export const propertiesType = PropTypes.shape({
       order: PropTypes.number
     })
   ),
-  name: PropTypes.number,
+  name: PropTypes.string,
   neighborhood: PropTypes.shape({
     id: PropTypes.string,
     link: PropTypes.string,
@@ -28,6 +28,7 @@ export const propertiesType = PropTypes.shape({
     max_rent: PropTypes.number,
     min_rent: PropTypes.number
   }),
+  slug: PropTypes.string,
   unit_stats: PropTypes.shape({
     max_rooms: PropTypes.number,
     min_rooms: PropTypes.number

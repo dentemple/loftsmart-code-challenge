@@ -1,6 +1,6 @@
 import React from 'react';
-import Component from '../Header';
+import TestComponent from '../Header';
 
 it('renders without crashing', () => {
-  shallow(<Component />);
+  shallow(<TestComponent />);
 });
