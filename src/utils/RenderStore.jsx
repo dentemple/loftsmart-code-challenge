@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
 import { connect } from 'react-redux'
 
 import { _testDispatch } from '../state/features/_testDispatch'
@@ -24,9 +23,11 @@ class RenderStore extends Component {
       minHeight: 100,
       margin: 40,
       padding: 20,
+      maxWidth: '100%',
 
       // text
       fontFamily: 'monospace',
+      fontSize: 12,
       lineHeight: '1.5',
       textAlign: 'left'
     }

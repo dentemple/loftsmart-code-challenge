@@ -1,6 +1,6 @@
 import React from 'react';
-import App from '../App';
+import TestComponent from '../index';
 
 it('renders without crashing', () => {
-  shallow(<App />);
+  shallow(<TestComponent />);
 });
