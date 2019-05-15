@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export const propertiesType = PropTypes.shape({
+export const propertyType = PropTypes.shape({
   amenities: PropTypes.arrayOf(
     PropTypes.shape({
       icon: PropTypes.string,
@@ -34,3 +34,5 @@ export const propertiesType = PropTypes.shape({
     min_rooms: PropTypes.number
   })
 });
+
+export const propertiesType = PropTypes.arrayOf(propertyType);

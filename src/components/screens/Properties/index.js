@@ -1,20 +1,20 @@
 import { connect } from 'react-redux';
 
-import UI from './PropertiesUI';
+import Properties from './UI';
 import {
-  fetchProperties,
-  getPropertiesFromState
+  getPropertiesFromState,
+  populateProperties
 } from '../../../state/features/getProperties';
 
 const mapState = state => getPropertiesFromState(state);
 
 const mapDispatch = dispatch => ({
-  fetchProperties: resource => {
-    dispatch(fetchProperties(resource));
+  populateProperties: () => {
+    dispatch(populateProperties());
   }
 });
 
 export default connect(
   mapState,
   mapDispatch
-)(UI);
+)(Properties);

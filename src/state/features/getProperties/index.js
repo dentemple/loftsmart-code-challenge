@@ -1,5 +1,3 @@
-import { API_WHITELIST } from '../../../metadata';
-
 /* types */
 export const FETCH_PROPERTIES_REQUEST = 'FETCH_PROPERTIES_REQUEST';
 export const FETCH_PROPERTIES_RECEIVE = 'FETCH_PROPERTIES_RECEIVE';
@@ -22,24 +20,17 @@ export const receiveError = (error, receivedAt = Date.now()) => ({
   receivedAt
 });
 
-export const fetchProperties = resource => dispatch => {
+export const populateProperties = () => dispatch => {
   dispatch(requestProperties());
 
-  if (!API_WHITELIST.includes(resource)) {
-    return new Promise(() => {
-      dispatch(receiveError(`The endpoint, '${resource}', is not recognized.`));
-    });
-  }
+  const url = `https://api.myjson.com/bins/afb2y`;
 
-  return fetch(`https://api.myjson.com/bins/${resource}`)
+  return fetch(url)
     .then(
       res => res.json(),
       err => dispatch(receiveError(`An error has occured.\n\n${err}`))
     )
-    .then(json => {
-      console.log(json.results[0].hits);
-      return dispatch(receiveProperties(json));
-    });
+    .then(json => dispatch(receiveProperties(json)));
 };
 
 /* state */

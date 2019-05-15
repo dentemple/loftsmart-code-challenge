@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
 import properties from './getProperties';
-import chosenProperty from './chooseProperty';
+import property from './selectedProperty';
 import _testReducer from './_testDispatch';
 
 const reducers = combineReducers({
-  chosenProperty,
+  property,
   properties,
   _test: _testReducer
 });
